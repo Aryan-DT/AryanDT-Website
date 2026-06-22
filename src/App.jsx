@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Projects from './components/Projects'
 import Infrastructure from './components/Infrastructure'
+import Stack from './components/Stack'
 import Footer from './components/Footer'
 
 export default function App() {
@@ -13,6 +14,7 @@ export default function App() {
         <Hero />
         <Projects />
         <Infrastructure />
+        <Stack />
         <section className="section" id="about">
           <div className="sec-head">
             <span className="sec-title">About</span>
@@ -20,8 +22,8 @@ export default function App() {
           </div>
           <div className="about-grid">
             <p className="about-p">
-              Math + CS at the University of Waterloo. I live in Waterloo, ON, and I treat programming the way most people treat a serious hobby: I enjoy the sharp problems, the systems thinking, and the clean execution.
-              Outside the terminal, I train MMA — BJJ, Muay Thai, and Judo — because it keeps the process honest and the work grounded.
+              Math + CS at the University of Waterloo. I live in Waterloo, ON, and I treat programming like a serious hobby: I enjoy sharp problems, systems thinking, and clean execution.
+              Outside the terminal, I train MMA - BJJ, Muay Thai, and Judo - and I play soccer to keep the process grounded.
             </p>
             <div>
               <div className="arow"><span className="arow-k">University</span><span className="arow-v">University of Waterloo</span></div>

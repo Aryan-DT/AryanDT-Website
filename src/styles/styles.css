@@ -47,9 +47,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .proj-ext{font-size:12px;color:var(--muted);transition:color .15s;cursor:pointer}
 .proj-ext:hover{color:var(--text)}
 
-.proj-visual{background:var(--surface);border-left:1px solid var(--border);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:1.5rem}
+.proj-visual{background:transparent;border:none;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:0}
 .grid-dots{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,0.08) 1px,transparent 1px);background-size:22px 22px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 30%,transparent 100%)}
-.proj-image{position:relative;z-index:1;width:100%;height:auto;max-width:260px;border-radius:16px;box-shadow:0 24px 48px rgba(0,0,0,0.22)}
+.proj-image{position:relative;z-index:1;width:100%;height:auto;max-width:260px;display:block;border-radius:0;box-shadow:none;object-fit:contain}
 
 .proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .proj-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.75rem;transition:border-color .2s,background .2s}
