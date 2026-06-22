@@ -1,0 +1,12 @@
+.vercel
+.env*
+
+# Dependency directories
+node_modules/
+
+# Production build
+dist/
+
+# Local files
+.DS_Store
+Thumbs.db
