@@ -15,7 +15,6 @@ const coreStack = [
 const agenticStack = [
   { name: 'PyTorch', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg' },
   { name: 'TensorFlow', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg' },
-  { name: 'NumPy / Pandas', logo: 'https://img.icons8.com/ios-filled/100/ffffff/matrix.png' },
   { name: 'FastAPI / Uvicorn', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg' },
   { name: 'LangGraph', logo: 'https://img.icons8.com/ios-filled/100/ffffff/flow-chart.png' },
   { name: 'Model Context Protocol', logo: 'https://img.icons8.com/ios-filled/100/ffffff/bridge.png' },
