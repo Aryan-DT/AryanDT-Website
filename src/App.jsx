@@ -21,16 +21,23 @@ export default function App() {
             <div className="sec-line" />
           </div>
           <div className="about-grid">
-            <p className="about-p">
-              Math + CS at the University of Waterloo. I live in Waterloo, ON, and I treat programming like a serious hobby: I enjoy sharp problems, systems thinking, and clean execution.
-              Outside the terminal, I train MMA - BJJ, Muay Thai, and Judo - and I play soccer to keep the process grounded.
-            </p>
+            <div className="about-photo-wrap">
+              <div className="about-photo-card">
+                <img src="/mirror_picture.jpg" alt="Portrait of Aryan Dewett" className="about-photo" />
+              </div>
+            </div>
             <div>
-              <div className="arow"><span className="arow-k">University</span><span className="arow-v">University of Waterloo</span></div>
-              <div className="arow"><span className="arow-k">Location</span><span className="arow-v">Waterloo, ON</span></div>
-              <div className="arow"><span className="arow-k">Focus</span><span className="arow-v">Agentic AI infrastructure</span></div>
-              <div className="arow"><span className="arow-k">GitHub</span><span className="arow-v"><a className="footer-link" href="https://github.com/Aryan-DT" target="_blank" rel="noreferrer">Aryan-DT ↗</a></span></div>
-              <div className="arow"><span className="arow-k">Email</span><span className="arow-v">aryandewett@gmail.com</span></div>
+              <p className="about-p">
+                Math + CS at the University of Waterloo. I live in Waterloo, ON, and I treat programming like a serious hobby: I enjoy sharp problems, systems thinking, and clean execution.
+                Outside the terminal, I train MMA - BJJ, Muay Thai, and Judo - and I play soccer to keep the process grounded.
+              </p>
+              <div className="about-details">
+                <div className="arow"><span className="arow-k">University</span><span className="arow-v">University of Waterloo</span></div>
+                <div className="arow"><span className="arow-k">Location</span><span className="arow-v">Waterloo, ON</span></div>
+                <div className="arow"><span className="arow-k">Focus</span><span className="arow-v">Agentic AI infrastructure</span></div>
+                <div className="arow"><span className="arow-k">GitHub</span><span className="arow-v"><a className="footer-link" href="https://github.com/Aryan-DT" target="_blank" rel="noreferrer">Aryan-DT ↗</a></span></div>
+                <div className="arow"><span className="arow-k">Email</span><span className="arow-v">aryandewett@gmail.com</span></div>
+              </div>
             </div>
           </div>
         </section>

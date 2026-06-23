@@ -21,30 +21,20 @@ const agenticStack = [
   { name: 'Model Context Protocol', logo: 'https://img.icons8.com/ios-filled/100/ffffff/bridge.png' },
 ]
 
-const sections = [
-  { title: 'Core stack', items: coreStack },
-  { title: 'Agentic stack', items: agenticStack },
-]
+const stackItems = [...coreStack, ...agenticStack]
 
 export default function Stack() {
   return (
     <section className="section" id="stack">
       <div className="sec-head">
-        <span className="sec-title">Technical Stack</span>
+        <span className="sec-title">Technical + Agentic Stack</span>
         <div className="sec-line" />
       </div>
-      <div className="tech-stack-grid">
-        {sections.map(section => (
-          <div className="tech-category" key={section.title}>
-            <div className="tech-category-title">{section.title}</div>
-            <div className="tech-grid">
-              {section.items.map(item => (
-                <div className="tech-icon compact" key={item.name}>
-                  <img src={item.logo} alt={item.name} loading="lazy" />
-                  <span className="tech-tooltip">{item.name}</span>
-                </div>
-              ))}
-            </div>
+      <div className="tech-grid tech-stack-single">
+        {stackItems.map(item => (
+          <div className="tech-icon compact" key={item.name}>
+            <img src={item.logo} alt={item.name} loading="lazy" />
+            <span className="tech-tooltip">{item.name}</span>
           </div>
         ))}
       </div>
