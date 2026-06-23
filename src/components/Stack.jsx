@@ -1,6 +1,6 @@
 import React from 'react'
 
-const stackItems = [
+const coreStack = [
   { name: 'Python', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
   { name: 'TypeScript', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
   { name: 'JavaScript', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
@@ -8,23 +8,43 @@ const stackItems = [
   { name: 'Vite', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg' },
   { name: 'HTML5', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
   { name: 'CSS3', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
-  { name: 'FastAPI', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg' },
   { name: 'Node.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
   { name: 'PostgreSQL', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
+]
+
+const agenticStack = [
+  { name: 'PyTorch', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg' },
+  { name: 'TensorFlow', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg' },
+  { name: 'NumPy / Pandas', logo: 'https://img.icons8.com/ios-filled/100/ffffff/matrix.png' },
+  { name: 'FastAPI / Uvicorn', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg' },
+  { name: 'LangGraph', logo: 'https://img.icons8.com/ios-filled/100/ffffff/flow-chart.png' },
+  { name: 'Model Context Protocol', logo: 'https://img.icons8.com/ios-filled/100/ffffff/bridge.png' },
+]
+
+const sections = [
+  { title: 'Core stack', items: coreStack },
+  { title: 'Agentic stack', items: agenticStack },
 ]
 
 export default function Stack() {
   return (
     <section className="section" id="stack">
       <div className="sec-head">
-        <span className="sec-title">Stack</span>
+        <span className="sec-title">Technical Stack</span>
         <div className="sec-line" />
       </div>
-      <div className="stack-grid">
-        {stackItems.map(item => (
-          <div className="tech-icon" key={item.name}>
-            <img src={item.logo} alt={item.name} loading="lazy" />
-            <span className="tech-tooltip">{item.name}</span>
+      <div className="tech-stack-grid">
+        {sections.map(section => (
+          <div className="tech-category" key={section.title}>
+            <div className="tech-category-title">{section.title}</div>
+            <div className="tech-grid">
+              {section.items.map(item => (
+                <div className="tech-icon compact" key={item.name}>
+                  <img src={item.logo} alt={item.name} loading="lazy" />
+                  <span className="tech-tooltip">{item.name}</span>
+                </div>
+              ))}
+            </div>
           </div>
         ))}
       </div>
