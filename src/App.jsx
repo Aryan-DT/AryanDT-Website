@@ -1,6 +1,8 @@
 import React from 'react'
+import { ArrowUpRight } from 'lucide-react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import Experience from './components/Experience'
 import Projects from './components/Projects'
 import Stack from './components/Stack'
 import Footer from './components/Footer'
@@ -11,11 +13,12 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <Experience />
         <Projects />
         <Stack />
         <section className="section" id="about">
           <div className="sec-head">
-            <span className="sec-title">About</span>
+            <h2 className="sec-title">About</h2>
             <div className="sec-line" />
           </div>
           <div className="about-layout">
@@ -27,7 +30,7 @@ export default function App() {
               <div className="arow"><span className="arow-k">University</span><span className="arow-v">University of Waterloo</span></div>
               <div className="arow"><span className="arow-k">Location</span><span className="arow-v">Waterloo, ON</span></div>
               <div className="arow"><span className="arow-k">Focus</span><span className="arow-v">Agentic AI infrastructure</span></div>
-              <div className="arow"><span className="arow-k">GitHub</span><span className="arow-v"><a className="footer-link" href="https://github.com/Aryan-DT" target="_blank" rel="noreferrer">Aryan-DT ↗</a></span></div>
+              <div className="arow"><span className="arow-k">GitHub</span><span className="arow-v"><a className="footer-link" href="https://github.com/Aryan-DT" target="_blank" rel="noreferrer">Aryan-DT<ArrowUpRight size={13} strokeWidth={2} className="inline-arrow" /></a></span></div>
               <div className="arow"><span className="arow-k">Email</span><span className="arow-v">aryandewett@gmail.com</span></div>
             </div>
             <div className="about-photo-wrap">

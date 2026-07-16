@@ -1,4 +1,6 @@
 import React from 'react'
+import TechIcon from './icons/TechIcon'
+import { GITHUB_PATH } from '../data/brandIcons'
 
 export default function Hero(){
   return (
@@ -9,8 +11,8 @@ export default function Hero(){
       </h1>
       <p className="hero-sub">Math + CS at the University of Waterloo. Engineering practical infrastructure for high-impact AI systems.</p>
       <div className="hero-actions">
-        <span className="btn-white" onClick={() => document.getElementById('projects').scrollIntoView({behavior:'smooth'})}>See my work</span>
-        <span className="btn-outline" onClick={() => window.open('https://github.com/Aryan-DT','_blank')}>GitHub</span>
+        <a className="btn-primary" href="#projects">See my work</a>
+        <a className="btn-outline" href="https://github.com/Aryan-DT" target="_blank" rel="noreferrer"><TechIcon path={GITHUB_PATH} size={14} className="ui-icon" />GitHub</a>
       </div>
     </div>
   )

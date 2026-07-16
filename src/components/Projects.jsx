@@ -1,12 +1,14 @@
 import React, {useEffect, useState} from 'react'
+import { ArrowUpRight } from 'lucide-react'
 import ProjectCard from './ProjectCard'
+import RotatingCompass from './RotatingCompass'
 
 export default function Projects(){
   const [count, setCount] = useState(0)
 
   useEffect(()=>{
     const dur = 1200
-    const target = 5000
+    const target = 10000
     const start = performance.now()
     function tick(now){
       const p = Math.min((now - start) / dur, 1)
@@ -20,7 +22,7 @@ export default function Projects(){
   return (
     <section className="section" id="projects">
       <div className="sec-head">
-        <span className="sec-title">Projects</span>
+        <h2 className="sec-title">Projects</h2>
         <div className="sec-line" />
       </div>
 
@@ -28,33 +30,34 @@ export default function Projects(){
         <div className="proj-featured-inner">
           <div className="proj-content">
             <span className="proj-tag">Flagship</span>
-            <h2 className="proj-name">
+            <h3 className="proj-name">
               <a href="https://ont-track.vercel.app/" target="_blank" rel="noreferrer" className="proj-name-link">
                 ONTrack
               </a>
-            </h2>
+            </h3>
             <p className="proj-desc">
               Ontario high school course planning tool. Prerequisite graph traversal, university program explorer backed by real admissions data, and a diagnostic survey.
             </p>
             <div className="proj-pills">
               <span className="pill">React</span>
               <span className="pill">Vite</span>
-              <span className="pill">Deployment</span>
+              <span className="pill">Firebase</span>
+              <span className="pill">Framer Motion</span>
             </div>
             <div className="proj-meta">
               <div>
                 <div className="proj-stat-n">{count.toLocaleString()}+</div>
                 <div className="proj-stat-l">Active users</div>
               </div>
-              <span className="proj-ext" onClick={()=> window.open('https://ont-track.vercel.app/','_blank')}>
-                ont-track.vercel.app ↗
-              </span>
+              <a className="proj-ext" href="https://ont-track.vercel.app/" target="_blank" rel="noreferrer">
+                ont-track.vercel.app<ArrowUpRight size={12} strokeWidth={2} className="inline-arrow" />
+              </a>
             </div>
           </div>
 
           <div className="proj-visual">
             <div className="grid-dots" />
-            <img src="/assets/image_b6ff20.png" alt="ONTrack project" className="proj-image" />
+            <RotatingCompass src="/assets/ontrack-compass.png" alt="ONTrack compass logo" />
           </div>
         </div>
       </div>
