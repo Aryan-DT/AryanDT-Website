@@ -1,5 +1,6 @@
 import React from 'react'
 import TechIcon from './icons/TechIcon'
+import TechLetter from './icons/TechLetter'
 import { stackItems } from '../data/stackIcons'
 
 export default function Stack() {
@@ -11,8 +12,12 @@ export default function Stack() {
       </div>
       <div className="tech-grid tech-stack-single">
         {stackItems.map(item => (
-          <div className="tech-icon compact" key={item.name} style={{ '--brand': `#${item.hex}` }}>
-            <TechIcon path={item.path} />
+          <div
+            className="tech-icon compact"
+            key={item.name}
+            style={item.hex ? { '--brand': `#${item.hex}` } : undefined}
+          >
+            {item.path ? <TechIcon path={item.path} /> : <TechLetter label={item.initials} />}
             <span className="tech-tooltip">{item.name}</span>
           </div>
         ))}
